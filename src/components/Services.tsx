@@ -1,4 +1,4 @@
-import { Video, Image, Palette, TrendingUp, FileText, Building } from "lucide-react";
+import { Video, Image, Palette, TrendingUp, FileText, Building, Smartphone } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 interface Service {
@@ -21,12 +21,28 @@ const Services = () => {
       priceFrom: "₹15,000",
     },
     {
-      name: "Ad Creatives",
-      scope: "social, display, video",
-      deliverables: ["Concept", "Design", "Copy", "A/B Variants"],
+      name: "Web Development",
+      scope: "websites, web apps, e-commerce",
+      deliverables: ["Design", "Development", "Hosting", "Maintenance"],
       icon: <Image className="w-6 h-6" />,
-      turnaround: "2-5 days",
-      priceFrom: "₹8,000",
+      turnaround: "4-8 weeks",
+      priceFrom: "₹75,000",
+    },
+    {
+      name: "Mobile App Development",
+      scope: "iOS, Android, cross-platform",
+      deliverables: ["UI/UX", "Development", "Testing", "Deployment"],
+      icon: <Smartphone className="w-6 h-6" />,
+      turnaround: "8-16 weeks",
+      priceFrom: "₹1,50,000",
+    },
+    {
+      name: "SEO & Digital Marketing",
+      scope: "on-page, off-page, analytics",
+      deliverables: ["Audit", "Optimization", "Content", "Reporting"],
+      icon: <TrendingUp className="w-6 h-6" />,
+      turnaround: "Ongoing",
+      priceFrom: "₹25,000/mo",
     },
     {
       name: "Branding & Identity",

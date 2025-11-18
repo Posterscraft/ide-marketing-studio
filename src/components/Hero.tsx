@@ -75,16 +75,15 @@ const Hero = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-medium text-foreground mb-6 leading-tight">
-            We craft bold visuals &<br />
+            We craft bold visuals,<br />
             <span className="gradient-primary bg-clip-text text-transparent">
-              performance marketing
-            </span>
-            <br />
-            for brands
+              digital solutions
+            </span> &<br />
+            performance marketing
           </h1>
 
           <p className="text-lg lg:text-xl text-muted-foreground mb-10 max-w-2xl">
-            Posters, banners, commercials, wedding films, and data-driven digital campaigns.
+            Posters, banners, commercials, wedding films, web development, mobile apps, SEO, and data-driven digital campaigns.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">

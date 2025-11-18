@@ -1,27 +1,30 @@
 import { ChevronRight, ChevronDown, FileCode, FileJson, FileText } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface ExplorerItem {
   name: string;
   type: "file" | "folder";
   icon?: React.ReactNode;
   children?: ExplorerItem[];
+  href?: string;
 }
 
 const ProjectExplorer = () => {
   const [expandedFolders, setExpandedFolders] = useState<Set<string>>(new Set(["src"]));
+  const navigate = useNavigate();
 
   const projectStructure: ExplorerItem[] = [
     {
       name: "src",
       type: "folder",
       children: [
-        { name: "overview.json", type: "file", icon: <FileJson className="w-4 h-4" /> },
-        { name: "services.xml", type: "file", icon: <FileCode className="w-4 h-4" /> },
-        { name: "portfolio.md", type: "file", icon: <FileText className="w-4 h-4" /> },
-        { name: "studio.tsx", type: "file", icon: <FileCode className="w-4 h-4" /> },
-        { name: "clients.yaml", type: "file", icon: <FileText className="w-4 h-4" /> },
-        { name: "contact.tsx", type: "file", icon: <FileCode className="w-4 h-4" /> },
+        { name: "overview.json", type: "file", icon: <FileJson className="w-4 h-4" />, href: "/" },
+        { name: "services.xml", type: "file", icon: <FileCode className="w-4 h-4" />, href: "/services" },
+        { name: "portfolio.md", type: "file", icon: <FileText className="w-4 h-4" />, href: "/portfolio" },
+        { name: "studio.tsx", type: "file", icon: <FileCode className="w-4 h-4" />, href: "/studio" },
+        { name: "clients.yaml", type: "file", icon: <FileText className="w-4 h-4" />, href: "/clients" },
+        { name: "contact.tsx", type: "file", icon: <FileCode className="w-4 h-4" />, href: "/contact" },
       ],
     },
   ];
@@ -40,12 +43,20 @@ const ProjectExplorer = () => {
     const isExpanded = expandedFolders.has(item.name);
     const paddingLeft = level * 12 + 8;
 
+    const handleClick = () => {
+      if (item.type === "folder") {
+        toggleFolder(item.name);
+      } else if (item.href) {
+        navigate(item.href);
+      }
+    };
+
     return (
       <div key={item.name}>
         <div
           className="flex items-center gap-2 px-2 py-1.5 hover:bg-secondary/50 cursor-pointer material-transition text-sm group"
           style={{ paddingLeft: `${paddingLeft}px` }}
-          onClick={() => item.type === "folder" && toggleFolder(item.name)}
+          onClick={handleClick}
         >
           {item.type === "folder" ? (
             <>

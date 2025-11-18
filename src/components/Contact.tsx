@@ -149,10 +149,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-foreground mb-1">Email</h3>
                     <a
-                      href="mailto:hello@posterscraft.com"
+                      href="mailto:contact@posterscraft.com"
                       className="text-sm text-muted-foreground hover:text-primary material-transition"
                     >
-                      hello@posterscraft.com
+                      contact@posterscraft.com
                     </a>
                   </div>
                 </div>
@@ -166,11 +166,27 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-foreground mb-1">Phone</h3>
                     <a
-                      href="tel:+919876543210"
+                      href="tel:+918207080940"
                       className="text-sm text-muted-foreground hover:text-primary material-transition"
                     >
-                      +91 98765 43210
+                      +91 82070 80940
                     </a>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6 elevation-2 border border-border bg-surface">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-primary/10 text-primary">
+                    <MapPin className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-foreground mb-1">Office</h3>
+                    <p className="text-sm text-muted-foreground">
+                      South Bankimpally, Madhyamgram
+                      <br />
+                      West Bengal, India
+                    </p>
                   </div>
                 </div>
               </Card>
@@ -183,9 +199,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-foreground mb-1">Studio</h3>
                     <p className="text-sm text-muted-foreground">
-                      Mumbai, Maharashtra
+                      Baguiati, Kolkata
                       <br />
-                      India
+                      West Bengal, India
                     </p>
                   </div>
                 </div>

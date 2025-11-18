@@ -1,9 +1,9 @@
 import AppBar from "@/components/AppBar";
 import ProjectExplorer from "@/components/ProjectExplorer";
-import Hero from "@/components/Hero";
+import Services from "@/components/Services";
 import Footer from "@/components/Footer";
 
-const Index = () => {
+const ServicesPage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <AppBar />
@@ -12,7 +12,7 @@ const Index = () => {
         <ProjectExplorer />
         
         <main className="flex-1 overflow-y-auto">
-          <Hero />
+          <Services />
           <Footer />
         </main>
       </div>
@@ -20,4 +20,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default ServicesPage;
