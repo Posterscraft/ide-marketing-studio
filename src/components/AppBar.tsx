@@ -1,17 +1,18 @@
 import { Menu, Search, Languages, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const AppBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "Services", href: "#services" },
-    { label: "Studio", href: "#studio" },
-    { label: "Portfolio", href: "#portfolio" },
-    { label: "Clients", href: "#clients" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: "Studio", href: "/studio" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Clients", href: "/clients" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -28,13 +29,13 @@ const AppBar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-1 flex-1">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.label}
-              href={item.href}
+              to={item.href}
               className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded material-transition"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -80,14 +81,14 @@ const AppBar = () => {
       {mobileMenuOpen && (
         <nav className="lg:hidden bg-surface border-t border-border elevation-2 animate-in slide-in-from-top">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.label}
-              href={item.href}
+              to={item.href}
               onClick={() => setMobileMenuOpen(false)}
               className="block px-4 py-3 text-sm text-foreground hover:bg-secondary/50 border-b border-border/50 material-transition"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
           <div className="p-4">
             <Button className="w-full gradient-primary text-primary-foreground">
