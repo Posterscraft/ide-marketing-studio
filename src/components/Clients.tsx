@@ -12,8 +12,14 @@ interface Testimonial {
 
 const Clients = () => {
   const clients = [
-    "TechCorp", "FashionHub", "MegaMall", "InnovateLabs", 
-    "BrandWorks", "CreativeStudio", "DigitalFlow", "MarketPro"
+    { name: "EFiling Infotech", url: "https://www.efilinginfotech.com/" },
+    { name: "NeoSigner", url: "https://neosigner.com/" },
+    { name: "Vardhaan Studio", url: "https://www.facebook.com/Vardhaanstudio" },
+    { name: "Techsalicious", url: "https://www.facebook.com/techsalicious/" },
+    { name: "Get DSC Online", url: "https://www.facebook.com/getdsconlinefree" },
+    { name: "Business Solutions", url: "https://www.facebook.com/profile.php?id=61572944314862" },
+    { name: "Enterprise Client", url: "https://www.facebook.com/profile.php?id=61574123769484" },
+    { name: "Service Provider", url: "https://www.facebook.com/profile.php?id=61578239124222" },
   ];
 
   const testimonials: Testimonial[] = [
@@ -54,14 +60,17 @@ const Clients = () => {
           <h2 className="text-2xl font-medium text-foreground mb-8">Trusted by leading brands</h2>
           <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
             {clients.map((client, index) => (
-              <div
+              <a
                 key={index}
-                className="px-6 py-3 bg-surface rounded-lg elevation-1 hover:elevation-2 material-transition cursor-pointer"
+                href={client.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-surface rounded-lg elevation-1 hover:elevation-3 material-transition cursor-pointer group"
               >
-                <span className="text-lg font-medium text-muted-foreground hover:text-foreground material-transition">
-                  {client}
+                <span className="text-lg font-medium text-muted-foreground group-hover:text-primary material-transition">
+                  {client.name}
                 </span>
-              </div>
+              </a>
             ))}
           </div>
         </div>
