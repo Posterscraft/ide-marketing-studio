@@ -1,4 +1,4 @@
-import { Menu, Search, Languages, User } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -50,30 +50,14 @@ const AppBar = () => {
 
         {/* Right Actions */}
         <div className="flex items-center gap-2 ml-auto">
-          <Button
-            size="sm"
-            className="hidden sm:flex gradient-primary text-primary-foreground hover:opacity-90 material-transition elevation-2 ripple-effect"
-          >
-            Get a Quote
-          </Button>
-          <button
-            className="p-2 hover:bg-secondary/50 rounded material-transition"
-            aria-label="Search"
-          >
-            <Search className="w-5 h-5 text-muted-foreground" />
-          </button>
-          <button
-            className="p-2 hover:bg-secondary/50 rounded material-transition hidden md:block"
-            aria-label="Change language"
-          >
-            <Languages className="w-5 h-5 text-muted-foreground" />
-          </button>
-          <button
-            className="p-2 hover:bg-secondary/50 rounded material-transition"
-            aria-label="Client login"
-          >
-            <User className="w-5 h-5 text-muted-foreground" />
-          </button>
+          <Link to="/contact">
+            <Button
+              size="sm"
+              className="gradient-primary text-primary-foreground hover:opacity-90 material-transition elevation-2"
+            >
+              Get a Quote
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -91,9 +75,11 @@ const AppBar = () => {
             </Link>
           ))}
           <div className="p-4">
-            <Button className="w-full gradient-primary text-primary-foreground">
-              Get a Quote
-            </Button>
+            <Link to="/contact">
+              <Button className="w-full gradient-primary text-primary-foreground">
+                Get a Quote
+              </Button>
+            </Link>
           </div>
         </nav>
       )}

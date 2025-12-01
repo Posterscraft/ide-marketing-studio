@@ -110,9 +110,22 @@ const Portfolio = () => {
                 className="overflow-hidden elevation-2 hover:elevation-4 material-transition border border-border bg-surface group cursor-pointer"
               >
                 {/* Project Preview */}
-                <div className="h-48 bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 flex items-center justify-center text-white text-4xl font-bold relative overflow-hidden">
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 material-transition" />
-                  <span className="material-icons text-6xl opacity-40">visibility</span>
+                <div className="h-48 relative overflow-hidden">
+                  {project.image_url ? (
+                    <>
+                      <img 
+                        src={project.image_url} 
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-105 material-transition"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    </>
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 flex items-center justify-center">
+                      <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 material-transition" />
+                      <span className="material-icons text-6xl opacity-40 text-primary">visibility</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Project Info */}
