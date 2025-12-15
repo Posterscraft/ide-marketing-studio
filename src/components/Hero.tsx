@@ -1,6 +1,8 @@
 import { Play, Calendar, Monitor, Smartphone, Tablet } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [deviceView, setDeviceView] = useState<"desktop" | "tablet" | "mobile">("desktop");
@@ -21,47 +23,39 @@ const Hero = () => {
       {/* Editor Tab Bar */}
       <div className="bg-surface-variant border-b border-border px-4 flex items-center justify-between h-10">
         <div className="flex items-center gap-2">
-          <div className="bg-surface px-4 py-1.5 rounded-t border border-b-0 border-border text-sm font-medium text-foreground">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="bg-surface px-4 py-1.5 rounded-t border border-b-0 border-border text-sm font-medium text-foreground"
+          >
             home.xml
-          </div>
+          </motion.div>
           <span className="material-icons text-base text-muted-foreground cursor-pointer hover:text-foreground">
             close
           </span>
         </div>
         <div className="flex items-center gap-1">
-          <button
-            onClick={() => setDeviceView("desktop")}
-            className={`p-1.5 rounded material-transition ${
-              deviceView === "desktop"
-                ? "bg-primary/10 text-primary"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-            aria-label="Desktop view"
-          >
-            <Monitor className="w-4 h-4" />
-          </button>
-          <button
-            onClick={() => setDeviceView("tablet")}
-            className={`p-1.5 rounded material-transition ${
-              deviceView === "tablet"
-                ? "bg-primary/10 text-primary"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-            aria-label="Tablet view"
-          >
-            <Tablet className="w-4 h-4" />
-          </button>
-          <button
-            onClick={() => setDeviceView("mobile")}
-            className={`p-1.5 rounded material-transition ${
-              deviceView === "mobile"
-                ? "bg-primary/10 text-primary"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-            aria-label="Mobile view"
-          >
-            <Smartphone className="w-4 h-4" />
-          </button>
+          {[
+            { view: "desktop" as const, icon: Monitor },
+            { view: "tablet" as const, icon: Tablet },
+            { view: "mobile" as const, icon: Smartphone },
+          ].map(({ view, icon: Icon }) => (
+            <motion.button
+              key={view}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setDeviceView(view)}
+              className={`p-1.5 rounded material-transition ${
+                deviceView === view
+                  ? "bg-primary/10 text-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+              aria-label={`${view} view`}
+            >
+              <Icon className="w-4 h-4" />
+            </motion.button>
+          ))}
         </div>
       </div>
 
@@ -70,49 +64,100 @@ const Hero = () => {
         <div
           className={`${getDeviceClass()} material-transition flex flex-col items-center justify-center text-center px-6 lg:px-12`}
         >
-          <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-mono mb-6">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-mono mb-6"
+          >
             {"<PostersCraft />"}
-          </div>
+          </motion.div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-medium text-foreground mb-6 leading-tight">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-medium text-foreground mb-6 leading-tight"
+          >
             We craft bold visuals,<br />
             <span className="gradient-primary bg-clip-text text-transparent">
               digital solutions
             </span> &<br />
             performance marketing
-          </h1>
+          </motion.h1>
 
-          <p className="text-lg lg:text-xl text-muted-foreground mb-10 max-w-2xl">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg lg:text-xl text-muted-foreground mb-10 max-w-2xl"
+          >
             Posters, banners, commercials, wedding films, web development, mobile apps, SEO, and data-driven digital campaigns.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button
-              size="lg"
-              className="bg-cta text-cta-foreground hover:opacity-90 material-transition elevation-2 ripple-effect"
-            >
-              <Play className="w-5 h-5 mr-2" />
-              Watch Showreel
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-primary text-primary hover:bg-primary/5 material-transition"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Book a Brief
-            </Button>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-col sm:flex-row gap-4 mb-12"
+          >
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+              <Button
+                size="lg"
+                className="bg-cta text-cta-foreground hover:opacity-90 material-transition elevation-2 ripple-effect"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Watch Showreel
+              </Button>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+              <Link to="/contact">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-primary text-primary hover:bg-primary/5 material-transition"
+                >
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Book a Brief
+                </Button>
+              </Link>
+            </motion.div>
+          </motion.div>
 
           {/* Code Snippet Preview */}
-          <div className="bg-surface border border-border rounded-lg p-6 elevation-2 max-w-2xl w-full text-left">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="bg-surface border border-border rounded-lg p-6 elevation-2 max-w-2xl w-full text-left"
+          >
             <div className="flex items-center gap-2 mb-4 pb-3 border-b border-border">
-              <div className="w-3 h-3 rounded-full bg-destructive"></div>
-              <div className="w-3 h-3 rounded-full bg-cta"></div>
-              <div className="w-3 h-3 rounded-full bg-primary"></div>
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.5 }}
+                className="w-3 h-3 rounded-full bg-destructive"
+              />
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.55 }}
+                className="w-3 h-3 rounded-full bg-cta"
+              />
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.6 }}
+                className="w-3 h-3 rounded-full bg-primary"
+              />
               <span className="text-xs text-muted-foreground ml-2 font-mono">project.config</span>
             </div>
-            <pre className="font-mono text-sm text-foreground leading-relaxed">
+            <motion.pre
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.7, duration: 0.5 }}
+              className="font-mono text-sm text-foreground leading-relaxed"
+            >
               <code>
                 <span className="text-code-keyword">const</span> project = {"{"}{"\n"}
                 {"  "}name: <span className="text-code-string">"Your Brand"</span>,{"\n"}
@@ -122,8 +167,8 @@ const Hero = () => {
                 {"\n"}
                 {"}"};
               </code>
-            </pre>
-          </div>
+            </motion.pre>
+          </motion.div>
         </div>
       </div>
     </section>
