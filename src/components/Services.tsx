@@ -1,4 +1,4 @@
-import { Video, Image, Palette, TrendingUp, FileText, Building, Smartphone } from "lucide-react";
+import { Video, Image, Palette, TrendingUp, Smartphone, Building } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 interface Service {
@@ -61,20 +61,12 @@ const Services = () => {
       priceFrom: "₹20,000/mo",
     },
     {
-      name: "Printing & Hoardings",
-      scope: "posters, billboards, signage",
-      deliverables: ["Design", "Print", "Installation", "Maintenance"],
-      icon: <FileText className="w-6 h-6" />,
-      turnaround: "7-14 days",
-      priceFrom: "₹10,000",
-    },
-    {
       name: "Studio Booking",
-      scope: "photo, video, recording",
+      scope: "wedding, pre-wedding, corporate, commercial, brand shoots",
       deliverables: ["Studio Space", "Equipment", "Crew", "Post-Production"],
       icon: <Building className="w-6 h-6" />,
       turnaround: "Hourly/Daily",
-      priceFrom: "₹5,000/day",
+      priceFrom: "Contact Us",
     },
   ];
 

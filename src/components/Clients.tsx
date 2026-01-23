@@ -12,14 +12,16 @@ interface Testimonial {
 
 const Clients = () => {
   const clients = [
+    { name: "Phoenix Real Esthetic", url: "https://www.phoenixrealesthatic.com/" },
+    { name: "Phoenix Travelopedia", url: "https://www.phoenixtravelopedia.com/" },
     { name: "EFiling Infotech", url: "https://www.efilinginfotech.com/" },
-    { name: "NeoSigner", url: "https://neosigner.com/" },
-    { name: "Vardhaan Studio", url: "https://www.facebook.com/Vardhaanstudio" },
-    { name: "Techsalicious", url: "https://www.facebook.com/techsalicious/" },
-    { name: "Get DSC Online", url: "https://www.facebook.com/getdsconlinefree" },
-    { name: "Business Solutions", url: "https://www.facebook.com/profile.php?id=61572944314862" },
-    { name: "Enterprise Client", url: "https://www.facebook.com/profile.php?id=61574123769484" },
-    { name: "Service Provider", url: "https://www.facebook.com/profile.php?id=61578239124222" },
+    { name: "Vastraa Studio", url: "https://vastraastudio.com/" },
+    { name: "Lumina Studio", url: "https://www.luminastudio.in/" },
+    { name: "The Timeliners Kolkata", url: "https://www.thetimelinerskolkata.com/" },
+    { name: "Suitespott", url: "https://www.suitespott.com/" },
+    { name: "Futuregrace Technologies", url: "https://www.futuregracetechnologies.com/" },
+    { name: "Futuregrace Consultancy", url: "https://www.futuregraceconsultancy.com/" },
+    { name: "Chill Video Wala", url: "https://www.chillvideowala.com/" },
   ];
 
   const testimonials: Testimonial[] = [
@@ -58,16 +60,16 @@ const Clients = () => {
             {"<Clients />"}
           </div>
           <h2 className="text-2xl font-medium text-foreground mb-8">Trusted by leading brands</h2>
-          <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
+          <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-6">
             {clients.map((client, index) => (
               <a
                 key={index}
                 href={client.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-surface rounded-lg elevation-1 hover:elevation-3 material-transition cursor-pointer group"
+                className="px-4 py-2 bg-surface rounded-lg elevation-1 hover:elevation-3 material-transition cursor-pointer group"
               >
-                <span className="text-lg font-medium text-muted-foreground group-hover:text-primary material-transition">
+                <span className="text-sm font-medium text-muted-foreground group-hover:text-primary material-transition">
                   {client.name}
                 </span>
               </a>
