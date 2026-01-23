@@ -2,6 +2,7 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import logo from "@/assets/logo.png";
 
 const AppBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,12 +20,10 @@ const AppBar = () => {
     <header className="sticky top-0 z-50 bg-surface elevation-2 border-b border-border">
       <div className="flex items-center h-14 px-4 gap-4">
         {/* Logo & Brand */}
-        <div className="flex items-center gap-3 min-w-[200px]">
-          <div className="w-8 h-8 gradient-primary rounded flex items-center justify-center">
-            <span className="text-white font-bold text-sm">PC</span>
-          </div>
+        <Link to="/" className="flex items-center gap-3 min-w-[200px]">
+          <img src={logo} alt="PostersCraft Logo" className="w-8 h-8 object-contain" />
           <span className="font-medium text-foreground hidden sm:block">PostersCraft</span>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-1 flex-1">

@@ -313,10 +313,10 @@ const Contact = () => {
                     <div>
                       <h3 className="font-medium text-foreground mb-1">Phone</h3>
                       <a
-                        href="tel:+918207080940"
+                        href="tel:+918981104129"
                         className="text-sm text-muted-foreground hover:text-primary material-transition"
                       >
-                        +91 82070 80940
+                        +91 89811 04129
                       </a>
                     </div>
                   </div>
@@ -354,6 +354,14 @@ const Contact = () => {
                         <br />
                         West Bengal, India
                       </p>
+                      <a
+                        href="https://www.luminastudio.in/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-primary hover:underline mt-1 inline-block"
+                      >
+                        Visit Studio Website →
+                      </a>
                     </div>
                   </div>
                 </Card>

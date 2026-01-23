@@ -2,15 +2,12 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import { usePortfolio, PortfolioProject } from "@/hooks/usePortfolio";
-import ProjectDetailModal from "./ProjectDetailModal";
-import { Loader2 } from "lucide-react";
+import { Loader2, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Portfolio = () => {
   const [categoryFilter, setCategoryFilter] = useState<string>("All");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const [selectedProject, setSelectedProject] = useState<PortfolioProject | null>(null);
-  const [modalOpen, setModalOpen] = useState(false);
 
   const { data: projects, isLoading } = usePortfolio();
 
@@ -29,11 +26,6 @@ const Portfolio = () => {
     setSelectedTags((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
-  };
-
-  const handleProjectClick = (project: PortfolioProject) => {
-    setSelectedProject(project);
-    setModalOpen(true);
   };
 
   const containerVariants = {
@@ -137,10 +129,7 @@ const Portfolio = () => {
           >
             {filteredProjects.map((project) => (
               <motion.div key={project.id} variants={cardVariants} transition={{ duration: 0.5 }}>
-                <Card
-                  onClick={() => handleProjectClick(project)}
-                  className="overflow-hidden elevation-2 hover:elevation-4 material-transition border border-border bg-surface group cursor-pointer transform hover:-translate-y-1"
-                >
+                <Card className="overflow-hidden elevation-2 hover:elevation-4 material-transition border border-border bg-surface group transform hover:-translate-y-1">
                   {/* Project Preview */}
                   <div className="h-48 relative overflow-hidden">
                     {project.image_url ? (
@@ -155,7 +144,7 @@ const Portfolio = () => {
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 flex items-center justify-center">
                         <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 material-transition" />
-                        <span className="material-icons text-6xl opacity-40 text-primary">visibility</span>
+                        <span className="material-icons text-6xl opacity-40 text-primary">web</span>
                       </div>
                     )}
                   </div>
@@ -190,17 +179,17 @@ const Portfolio = () => {
                       )}
                     </div>
 
-                    {project.metrics && project.metrics.length > 0 && (
-                      <div className="grid grid-cols-2 gap-3 pt-4 border-t border-border">
-                        {project.metrics.map((metric, i) => (
-                          <div key={i}>
-                            <div className="text-lg font-medium text-foreground">
-                              {metric.value}
-                            </div>
-                            <div className="text-xs text-muted-foreground">{metric.label}</div>
-                          </div>
-                        ))}
-                      </div>
+                    {/* Visit Project Link */}
+                    {project.project_url && (
+                      <a
+                        href={project.project_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-4 py-2 mt-2 gradient-primary text-primary-foreground rounded-lg text-sm font-medium hover:opacity-90 material-transition elevation-1"
+                      >
+                        Visit Project
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
                     )}
                   </div>
                 </Card>
@@ -220,13 +209,6 @@ const Portfolio = () => {
           </motion.div>
         )}
       </div>
-
-      {/* Project Detail Modal */}
-      <ProjectDetailModal
-        project={selectedProject}
-        open={modalOpen}
-        onOpenChange={setModalOpen}
-      />
     </section>
   );
 };

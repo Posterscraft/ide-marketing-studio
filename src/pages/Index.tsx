@@ -2,6 +2,7 @@ import AppBar from "@/components/AppBar";
 import ProjectExplorer from "@/components/ProjectExplorer";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import TechStack from "@/components/TechStack";
 import Portfolio from "@/components/Portfolio";
 import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
@@ -19,6 +20,7 @@ const Index = () => {
         <main className="flex-1 overflow-y-auto">
           <Hero />
           <Services />
+          <TechStack />
           <Portfolio />
           <Clients />
           <Contact />
