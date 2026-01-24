@@ -2,7 +2,7 @@ import AppBar from "@/components/AppBar";
 import ProjectExplorer from "@/components/ProjectExplorer";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
-import { Play, Monitor, Cpu, Film, Palette, Camera, ExternalLink } from "lucide-react";
+import { Monitor, Cpu, Film, Palette, Camera, ExternalLink } from "lucide-react";
 
 const StudioPage = () => {
   const editingSetups = [
@@ -54,20 +54,8 @@ const StudioPage = () => {
                 </p>
               </div>
 
-              {/* Main Content Grid */}
-              <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto mb-12 lg:mb-16">
-                {/* Showreel Card */}
-                <Card className="p-6 lg:p-8 elevation-3 border border-border bg-surface">
-                  <h3 className="text-lg lg:text-xl font-medium mb-4 text-foreground">Showreel</h3>
-                  <div className="aspect-video bg-editor-gutter rounded-lg flex items-center justify-center mb-4 cursor-pointer group hover:bg-primary/10 material-transition">
-                    <Play className="w-12 h-12 lg:w-16 lg:h-16 text-primary group-hover:scale-110 material-transition" />
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    From concept to delivery, see how we bring visions to life through video editing, color grading, and stunning motion graphics.
-                  </p>
-                </Card>
-
-                {/* Studio Location Card */}
+              {/* Studio Location Card */}
+              <div className="max-w-2xl mx-auto mb-12 lg:mb-16">
                 <Card className="p-6 lg:p-8 elevation-3 border border-border bg-surface">
                   <h3 className="text-lg lg:text-xl font-medium mb-4 text-foreground">Studio Locations</h3>
                   <div className="space-y-4 lg:space-y-6">
