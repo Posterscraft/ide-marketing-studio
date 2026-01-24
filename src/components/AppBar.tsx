@@ -2,7 +2,8 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-only.png";
+import ThemeToggle from "./ThemeToggle";
 
 const AppBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,11 +19,10 @@ const AppBar = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-surface elevation-2 border-b border-border">
-      <div className="flex items-center h-14 px-4 gap-4">
-        {/* Logo & Brand */}
-        <Link to="/" className="flex items-center gap-3 min-w-[200px]">
-          <img src={logo} alt="PostersCraft Logo" className="w-8 h-8 object-contain" />
-          <span className="font-medium text-foreground hidden sm:block">PostersCraft</span>
+      <div className="flex items-center h-14 px-4 gap-2 lg:gap-4">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2 lg:gap-3 min-w-0">
+          <img src={logo} alt="PostersCraft Logo" className="w-8 h-8 lg:w-10 lg:h-10 object-contain" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -31,28 +31,30 @@ const AppBar = () => {
             <Link
               key={item.label}
               to={item.href}
-              className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded material-transition"
+              className="px-3 xl:px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded material-transition"
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 hover:bg-secondary/50 rounded material-transition"
-          aria-label="Toggle menu"
-        >
-          <Menu className="w-5 h-5" />
-        </button>
-
         {/* Right Actions */}
-        <div className="flex items-center gap-2 ml-auto">
-          <Link to="/contact">
+        <div className="flex items-center gap-1 lg:gap-2 ml-auto">
+          <ThemeToggle />
+          
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 hover:bg-secondary/50 rounded material-transition"
+            aria-label="Toggle menu"
+          >
+            <Menu className="w-5 h-5" />
+          </button>
+
+          <Link to="/contact" className="hidden sm:block">
             <Button
               size="sm"
-              className="gradient-primary text-primary-foreground hover:opacity-90 material-transition elevation-2"
+              className="gradient-primary text-primary-foreground hover:opacity-90 material-transition elevation-2 text-xs lg:text-sm"
             >
               Get a Quote
             </Button>
@@ -74,7 +76,7 @@ const AppBar = () => {
             </Link>
           ))}
           <div className="p-4">
-            <Link to="/contact">
+            <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
               <Button className="w-full gradient-primary text-primary-foreground">
                 Get a Quote
               </Button>

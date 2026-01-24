@@ -1,4 +1,4 @@
-import { Video, Image, Palette, TrendingUp, Smartphone, Building } from "lucide-react";
+import { Video, Image, Palette, TrendingUp, Smartphone, Building, Film } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 interface Service {
@@ -19,6 +19,14 @@ const Services = () => {
       icon: <Video className="w-6 h-6" />,
       turnaround: "5-10 days",
       priceFrom: "₹15,000",
+    },
+    {
+      name: "Video & Reels Editing",
+      scope: "YouTube, Instagram, corporate",
+      deliverables: ["Cut & Edit", "Color Grade", "Sound Design", "Motion GFX"],
+      icon: <Film className="w-6 h-6" />,
+      turnaround: "2-5 days",
+      priceFrom: "₹5,000",
     },
     {
       name: "Web Development",
@@ -71,28 +79,28 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-16 lg:py-24 bg-background">
+    <section id="services" className="py-12 lg:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="mb-12">
+        <div className="mb-8 lg:mb-12">
           <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded text-sm font-mono mb-4">
             {"<Services />"}
           </div>
-          <h2 className="text-3xl lg:text-4xl font-medium text-foreground mb-4">
+          <h2 className="text-2xl lg:text-4xl font-medium text-foreground mb-4">
             Our Service Portfolio
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl">
+          <p className="text-base lg:text-lg text-muted-foreground max-w-2xl">
             Full-stack creative and marketing solutions, coded for maximum impact.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="p-6 elevation-2 hover:elevation-4 material-transition border border-border bg-surface group cursor-pointer"
+              className="p-4 lg:p-6 elevation-2 hover:elevation-4 material-transition border border-border bg-surface group cursor-pointer"
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:gradient-primary group-hover:text-primary-foreground material-transition">
+              <div className="flex items-start justify-between mb-3 lg:mb-4">
+                <div className="p-2 lg:p-3 rounded-lg bg-primary/10 text-primary group-hover:gradient-primary group-hover:text-primary-foreground material-transition">
                   {service.icon}
                 </div>
                 <span className="text-xs font-mono text-cta bg-cta/10 px-2 py-1 rounded">
@@ -100,11 +108,11 @@ const Services = () => {
                 </span>
               </div>
 
-              <h3 className="text-xl font-medium text-foreground mb-2">
+              <h3 className="text-base lg:text-xl font-medium text-foreground mb-2">
                 {service.name}
               </h3>
 
-              <div className="bg-editor-bg rounded p-4 mb-4 font-mono text-xs border border-border">
+              <div className="bg-editor-bg rounded p-3 lg:p-4 mb-3 lg:mb-4 font-mono text-xs border border-border">
                 <div className="text-code-keyword">
                   {"<service "}
                   <span className="text-code-string">
@@ -112,7 +120,7 @@ const Services = () => {
                   </span>
                   {">"}
                 </div>
-                <div className="ml-4 my-2 text-foreground">
+                <div className="ml-2 lg:ml-4 my-2 text-foreground text-xs">
                   deliverables: [
                   {service.deliverables.map((item, i) => (
                     <span key={i}>
@@ -125,7 +133,7 @@ const Services = () => {
                 <div className="text-code-keyword">{"</service>"}</div>
               </div>
 
-              <div className="flex items-center justify-between text-sm">
+              <div className="flex items-center justify-between text-xs lg:text-sm">
                 <span className="text-muted-foreground">
                   <span className="material-icons text-sm align-middle mr-1">schedule</span>
                   {service.turnaround}

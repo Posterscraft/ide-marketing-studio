@@ -61,7 +61,7 @@ export default {
         },
       },
       fontFamily: {
-        roboto: ['Roboto', 'system-ui', 'sans-serif'],
+        nunito: ['Nunito', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'Consolas', 'monospace'],
       },
       borderRadius: {
