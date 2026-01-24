@@ -22,7 +22,7 @@ const AppBar = () => {
       <div className="flex items-center h-14 px-4 gap-2 lg:gap-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 lg:gap-3 min-w-0">
-          <img src={logo} alt="PostersCraft Logo" className="w-8 h-8 lg:w-10 lg:h-10 object-contain" />
+          <img src={logo} alt="PostersCraft Logo" className="w-12 h-12 lg:w-16 lg:h-16 object-contain" />
         </Link>
 
         {/* Desktop Navigation */}
