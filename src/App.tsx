@@ -15,9 +15,14 @@ import BlogPage from "./pages/BlogPage";
 import PricingPage from "./pages/PricingPage";
 import FAQPage from "./pages/FAQPage";
 import CreativeProductionPage from "./pages/CreativeProductionPage";
+import VideoEditingPage from "./pages/VideoEditingPage";
+import WebDevelopmentPage from "./pages/WebDevelopmentPage";
+import MobileAppPage from "./pages/MobileAppPage";
+import SeoMarketingPage from "./pages/SeoMarketingPage";
 import AdCreativesPage from "./pages/AdCreativesPage";
 import BrandingPage from "./pages/BrandingPage";
 import SocialCampaignsPage from "./pages/SocialCampaignsPage";
+import EventManagementPage from "./pages/EventManagementPage";
 import StudioBookingPage from "./pages/StudioBookingPage";
 import NotFound from "./pages/NotFound";
 
@@ -42,9 +47,14 @@ const App = () => (
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/creative-production" element={<CreativeProductionPage />} />
+          <Route path="/video-editing" element={<VideoEditingPage />} />
+          <Route path="/web-development" element={<WebDevelopmentPage />} />
+          <Route path="/mobile-app-development" element={<MobileAppPage />} />
+          <Route path="/seo-marketing" element={<SeoMarketingPage />} />
           <Route path="/ad-creatives" element={<AdCreativesPage />} />
           <Route path="/branding" element={<BrandingPage />} />
           <Route path="/social-campaigns" element={<SocialCampaignsPage />} />
+          <Route path="/event-management" element={<EventManagementPage />} />
           <Route path="/studio-booking" element={<StudioBookingPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
