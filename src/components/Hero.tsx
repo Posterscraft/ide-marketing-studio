@@ -1,4 +1,4 @@
-import { Play, Calendar, Monitor, Smartphone, Tablet } from "lucide-react";
+import { Calendar, Monitor, Smartphone, Tablet } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -102,23 +102,24 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-4 mb-12"
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-              <Button
-                size="lg"
-                className="bg-cta text-cta-foreground hover:opacity-90 material-transition elevation-2 ripple-effect"
-              >
-                <Play className="w-5 h-5 mr-2" />
-                Watch Showreel
-              </Button>
+              <Link to="/contact">
+                <Button
+                  size="lg"
+                  className="bg-cta text-cta-foreground hover:opacity-90 material-transition elevation-2 ripple-effect"
+                >
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Book a Brief
+                </Button>
+              </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-              <Link to="/contact">
+              <Link to="/about">
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-2 border-primary text-primary hover:bg-primary/5 material-transition"
                 >
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Book a Brief
+                  About Us
                 </Button>
               </Link>
             </motion.div>
