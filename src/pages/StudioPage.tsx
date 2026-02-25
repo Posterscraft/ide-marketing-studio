@@ -3,6 +3,7 @@ import ProjectExplorer from "@/components/ProjectExplorer";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Monitor, Cpu, Film, Palette, Camera, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 
 const StudioPage = () => {
   const editingSetups = [
@@ -40,6 +41,16 @@ const StudioPage = () => {
         <ProjectExplorer />
         
         <main className="flex-1 overflow-y-auto">
+          <div className="bg-surface-variant border-b border-border px-4 flex items-center h-10">
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-surface px-4 py-1.5 rounded-t border border-b-0 border-border text-sm font-medium text-foreground"
+            >
+              studio.tsx
+            </motion.div>
+          </div>
           <section className="py-12 lg:py-24">
             <div className="container mx-auto px-4">
               <div className="mb-8 lg:mb-12 text-center">

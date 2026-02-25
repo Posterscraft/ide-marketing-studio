@@ -1,4 +1,4 @@
-import { Video, Image, Palette, TrendingUp, Smartphone, Building, Film } from "lucide-react";
+import { Video, Image, Palette, TrendingUp, Smartphone, Building, Film, PartyPopper } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 interface Service {
@@ -67,6 +67,14 @@ const Services = () => {
       icon: <TrendingUp className="w-6 h-6" />,
       turnaround: "Monthly",
       priceFrom: "₹20,000/mo",
+    },
+    {
+      name: "Event Management",
+      scope: "corporate events, product launches, exhibitions",
+      deliverables: ["Planning", "Coordination", "Vendor Mgmt", "On-site Execution"],
+      icon: <PartyPopper className="w-6 h-6" />,
+      turnaround: "2-8 weeks",
+      priceFrom: "₹50,000",
     },
     {
       name: "Studio Booking",

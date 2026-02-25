@@ -21,6 +21,7 @@ const ProjectExplorer = () => {
       children: [
         { name: "overview.json", type: "file", icon: <FileJson className="w-4 h-4" />, href: "/" },
         { name: "services.xml", type: "file", icon: <FileCode className="w-4 h-4" />, href: "/services" },
+        { name: "about.json", type: "file", icon: <FileJson className="w-4 h-4" />, href: "/about" },
         { name: "portfolio.md", type: "file", icon: <FileText className="w-4 h-4" />, href: "/portfolio" },
         { name: "studio.tsx", type: "file", icon: <FileCode className="w-4 h-4" />, href: "/studio" },
         { name: "clients.yaml", type: "file", icon: <FileText className="w-4 h-4" />, href: "/clients" },

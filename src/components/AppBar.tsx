@@ -2,14 +2,19 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import logo from "@/assets/logo-only.png";
+import logoLight from "@/assets/logo-only.png";
+import logoDark from "@/assets/logo-only-dark.png";
 import ThemeToggle from "./ThemeToggle";
+import { useTheme } from "@/hooks/useTheme";
 
 const AppBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { isDark } = useTheme();
+  const logo = isDark ? logoDark : logoLight;
   
   const navItems = [
     { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Studio", href: "/studio" },
     { label: "Portfolio", href: "/portfolio" },
@@ -22,7 +27,7 @@ const AppBar = () => {
       <div className="flex items-center h-14 px-4 gap-2 lg:gap-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 lg:gap-3 min-w-0">
-          <img src={logo} alt="PostersCraft Logo" className="w-12 h-12 lg:w-16 lg:h-16 object-contain" />
+          <img src={logo} alt="PostersCraft Logo" className="w-16 h-16 lg:w-20 lg:h-20 object-contain" />
         </Link>
 
         {/* Desktop Navigation */}
