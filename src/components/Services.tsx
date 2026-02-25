@@ -1,5 +1,6 @@
 import { Video, Image, Palette, TrendingUp, Smartphone, Building, Film, PartyPopper } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 interface Service {
   name: string;
@@ -8,6 +9,7 @@ interface Service {
   icon: React.ReactNode;
   turnaround: string;
   priceFrom: string;
+  href: string;
 }
 
 const Services = () => {
@@ -19,6 +21,7 @@ const Services = () => {
       icon: <Video className="w-6 h-6" />,
       turnaround: "5-10 days",
       priceFrom: "₹15,000",
+      href: "/creative-production",
     },
     {
       name: "Video & Reels Editing",
@@ -27,6 +30,7 @@ const Services = () => {
       icon: <Film className="w-6 h-6" />,
       turnaround: "2-5 days",
       priceFrom: "₹5,000",
+      href: "/video-editing",
     },
     {
       name: "Web Development",
@@ -35,6 +39,7 @@ const Services = () => {
       icon: <Image className="w-6 h-6" />,
       turnaround: "4-8 weeks",
       priceFrom: "₹75,000",
+      href: "/web-development",
     },
     {
       name: "Mobile App Development",
@@ -43,6 +48,7 @@ const Services = () => {
       icon: <Smartphone className="w-6 h-6" />,
       turnaround: "8-16 weeks",
       priceFrom: "₹1,50,000",
+      href: "/mobile-app-development",
     },
     {
       name: "SEO & Digital Marketing",
@@ -51,6 +57,7 @@ const Services = () => {
       icon: <TrendingUp className="w-6 h-6" />,
       turnaround: "Ongoing",
       priceFrom: "₹25,000/mo",
+      href: "/seo-marketing",
     },
     {
       name: "Branding & Identity",
@@ -59,6 +66,7 @@ const Services = () => {
       icon: <Palette className="w-6 h-6" />,
       turnaround: "10-15 days",
       priceFrom: "₹25,000",
+      href: "/branding",
     },
     {
       name: "Social Media Campaigns",
@@ -67,6 +75,7 @@ const Services = () => {
       icon: <TrendingUp className="w-6 h-6" />,
       turnaround: "Monthly",
       priceFrom: "₹20,000/mo",
+      href: "/social-campaigns",
     },
     {
       name: "Event Management",
@@ -75,6 +84,7 @@ const Services = () => {
       icon: <PartyPopper className="w-6 h-6" />,
       turnaround: "2-8 weeks",
       priceFrom: "₹50,000",
+      href: "/event-management",
     },
     {
       name: "Studio Booking",
@@ -83,6 +93,7 @@ const Services = () => {
       icon: <Building className="w-6 h-6" />,
       turnaround: "Hourly/Daily",
       priceFrom: "Contact Us",
+      href: "/studio-booking",
     },
   ];
 
@@ -103,54 +114,55 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
           {services.map((service, index) => (
-            <Card
-              key={index}
-              className="p-4 lg:p-6 elevation-2 hover:elevation-4 material-transition border border-border bg-surface group cursor-pointer"
-            >
-              <div className="flex items-start justify-between mb-3 lg:mb-4">
-                <div className="p-2 lg:p-3 rounded-lg bg-primary/10 text-primary group-hover:gradient-primary group-hover:text-primary-foreground material-transition">
-                  {service.icon}
-                </div>
-                <span className="text-xs font-mono text-cta bg-cta/10 px-2 py-1 rounded">
-                  {service.priceFrom}
-                </span>
-              </div>
-
-              <h3 className="text-base lg:text-xl font-medium text-foreground mb-2">
-                {service.name}
-              </h3>
-
-              <div className="bg-editor-bg rounded p-3 lg:p-4 mb-3 lg:mb-4 font-mono text-xs border border-border">
-                <div className="text-code-keyword">
-                  {"<service "}
-                  <span className="text-code-string">
-                    scope="{service.scope}"
+            <Link key={index} to={service.href}>
+              <Card
+                className="p-4 lg:p-6 elevation-2 hover:elevation-4 material-transition border border-border bg-surface group cursor-pointer h-full"
+              >
+                <div className="flex items-start justify-between mb-3 lg:mb-4">
+                  <div className="p-2 lg:p-3 rounded-lg bg-primary/10 text-primary group-hover:gradient-primary group-hover:text-primary-foreground material-transition">
+                    {service.icon}
+                  </div>
+                  <span className="text-xs font-mono text-cta bg-cta/10 px-2 py-1 rounded">
+                    {service.priceFrom}
                   </span>
-                  {">"}
                 </div>
-                <div className="ml-2 lg:ml-4 my-2 text-foreground text-xs">
-                  deliverables: [
-                  {service.deliverables.map((item, i) => (
-                    <span key={i}>
-                      {i > 0 && ", "}
-                      <span className="text-code-string">"{item}"</span>
-                    </span>
-                  ))}
-                  ]
-                </div>
-                <div className="text-code-keyword">{"</service>"}</div>
-              </div>
 
-              <div className="flex items-center justify-between text-xs lg:text-sm">
-                <span className="text-muted-foreground">
-                  <span className="material-icons text-sm align-middle mr-1">schedule</span>
-                  {service.turnaround}
-                </span>
-                <span className="text-primary group-hover:underline material-transition">
-                  Learn more →
-                </span>
-              </div>
-            </Card>
+                <h3 className="text-base lg:text-xl font-medium text-foreground mb-2">
+                  {service.name}
+                </h3>
+
+                <div className="bg-editor-bg rounded p-3 lg:p-4 mb-3 lg:mb-4 font-mono text-xs border border-border">
+                  <div className="text-code-keyword">
+                    {"<service "}
+                    <span className="text-code-string">
+                      scope="{service.scope}"
+                    </span>
+                    {">"}
+                  </div>
+                  <div className="ml-2 lg:ml-4 my-2 text-foreground text-xs">
+                    deliverables: [
+                    {service.deliverables.map((item, i) => (
+                      <span key={i}>
+                        {i > 0 && ", "}
+                        <span className="text-code-string">"{item}"</span>
+                      </span>
+                    ))}
+                    ]
+                  </div>
+                  <div className="text-code-keyword">{"</service>"}</div>
+                </div>
+
+                <div className="flex items-center justify-between text-xs lg:text-sm">
+                  <span className="text-muted-foreground">
+                    <span className="material-icons text-sm align-middle mr-1">schedule</span>
+                    {service.turnaround}
+                  </span>
+                  <span className="text-primary group-hover:underline material-transition">
+                    Learn more →
+                  </span>
+                </div>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
