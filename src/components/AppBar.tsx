@@ -25,7 +25,7 @@ const AppBar = () => {
       <div className="flex items-center h-20 px-4 gap-2 lg:gap-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 lg:gap-3 min-w-0">
-          <img src={logo} alt="PostersCraft Logo" className="h-[25px] w-auto object-contain" style={isDark ? { filter: 'brightness(0) invert(1)' } : undefined} />
+          <img src={logo} alt="PostersCraft Logo" className="h-[30px] w-auto object-contain" style={isDark ? { filter: 'brightness(0) invert(1)' } : undefined} />
         </Link>
 
         {/* Desktop Navigation */}
