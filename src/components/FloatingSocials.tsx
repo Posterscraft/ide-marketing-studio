@@ -4,7 +4,7 @@ const FloatingSocials = () => {
   return (
     <div className="fixed right-4 bottom-4 md:right-6 md:bottom-6 z-40 flex flex-col gap-2 md:gap-3">
       <a
-        href="https://www.instagram.com/posterscraft"
+        href="https://www.instagram.com/posterscraft_official/"
         target="_blank"
         rel="noopener noreferrer"
         className="w-10 h-10 md:w-12 md:h-12 rounded-full gradient-primary flex items-center justify-center text-primary-foreground elevation-4 hover:elevation-6 material-transition group"
