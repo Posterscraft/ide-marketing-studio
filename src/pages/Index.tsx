@@ -17,7 +17,7 @@ const Index = () => {
       <div className="flex flex-1">
         <ProjectExplorer />
         
-        <main className="flex-1 overflow-y-auto">
+        <main className="flex-1 overflow-y-auto flex flex-col">
           <Hero />
           <Services />
           <TechStack />

@@ -40,7 +40,7 @@ const AboutPage = () => {
       <div className="flex flex-1">
         <ProjectExplorer />
         
-        <main className="flex-1 overflow-y-auto">
+        <main className="flex-1 overflow-y-auto flex flex-col">
           {/* Editor Tab */}
           <div className="bg-surface-variant border-b border-border px-4 flex items-center h-10">
             <motion.div
