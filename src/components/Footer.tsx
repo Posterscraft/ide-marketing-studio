@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-surface border-t border-border">
+    <footer className="bg-surface border-t border-border mt-auto">
       {/* Status Bar */}
       <div className="bg-status-bar">
         <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between text-xs text-status-text gap-2">

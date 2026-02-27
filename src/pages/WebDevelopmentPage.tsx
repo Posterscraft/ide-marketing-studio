@@ -57,7 +57,7 @@ const WebDevelopmentPage = () => {
       <AppBar />
       <div className="flex flex-1">
         <ProjectExplorer />
-        <main className="flex-1 overflow-y-auto">
+        <main className="flex-1 overflow-y-auto flex flex-col">
           <div className="bg-surface-variant border-b border-border px-4 flex items-center h-10">
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="bg-surface px-4 py-1.5 rounded-t border border-b-0 border-border text-sm font-medium text-foreground">
               web-development.tsx

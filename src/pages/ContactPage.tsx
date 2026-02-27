@@ -11,7 +11,7 @@ const ContactPage = () => {
       <div className="flex flex-1">
         <ProjectExplorer />
         
-        <main className="flex-1 overflow-y-auto">
+        <main className="flex-1 overflow-y-auto flex flex-col">
           <Contact />
           <Footer />
         </main>

@@ -10,7 +10,7 @@ const FAQPage = () => {
       <div className="flex flex-1">
         <ProjectExplorer />
         
-        <main className="flex-1 overflow-y-auto">
+        <main className="flex-1 overflow-y-auto flex flex-col">
           <section className="py-16 lg:py-24">
             <div className="container mx-auto px-4">
               <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded text-sm font-mono mb-4">
