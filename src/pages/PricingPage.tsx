@@ -1,6 +1,7 @@
 import AppBar from "@/components/AppBar";
 import ProjectExplorer from "@/components/ProjectExplorer";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const PricingPage = () => {
   return (
@@ -11,6 +12,7 @@ const PricingPage = () => {
         <ProjectExplorer />
         
         <main className="flex-1 overflow-y-auto flex flex-col">
+          <SEO title="Pricing" description="Affordable pricing for web development, app development, SEO, branding, video editing, and digital marketing services by PostersCraft." path="/pricing" />
           <section className="py-16 lg:py-24">
             <div className="container mx-auto px-4">
               <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded text-sm font-mono mb-4">

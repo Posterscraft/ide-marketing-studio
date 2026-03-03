@@ -8,6 +8,7 @@ import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingSocials from "@/components/FloatingSocials";
+import SEO from "@/components/SEO";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
         <ProjectExplorer />
         
         <main className="flex-1 overflow-y-auto flex flex-col">
+          <SEO title="PostersCraft - Web Development, App Development & Digital Marketing Studio" description="PostersCraft specializes in web development, mobile app development, SEO optimization, creative production, and digital marketing solutions in Kolkata." path="/" keywords="web development, mobile app development, SEO, digital marketing, branding, Kolkata" />
           <Hero />
           <Services />
           <TechStack />

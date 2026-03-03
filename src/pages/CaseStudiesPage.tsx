@@ -1,6 +1,7 @@
 import AppBar from "@/components/AppBar";
 import ProjectExplorer from "@/components/ProjectExplorer";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const CaseStudiesPage = () => {
   return (
@@ -11,6 +12,7 @@ const CaseStudiesPage = () => {
         <ProjectExplorer />
         
         <main className="flex-1 overflow-y-auto flex flex-col">
+          <SEO title="Case Studies" description="Explore detailed case studies of PostersCraft's web development, digital marketing, and branding success stories." path="/case-studies" />
           <section className="py-16 lg:py-24">
             <div className="container mx-auto px-4">
               <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded text-sm font-mono mb-4">

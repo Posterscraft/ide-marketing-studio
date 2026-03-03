@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Palette, CheckCircle, Layers, Eye, PenTool, Target, ArrowRight, Sparkles, FileText, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const BrandingPage = () => {
   const services = [
@@ -43,6 +44,7 @@ const BrandingPage = () => {
       <div className="flex flex-1">
         <ProjectExplorer />
         <main className="flex-1 overflow-y-auto flex flex-col">
+          <SEO title="Branding & Identity Design" description="Logo design, visual identity, brand guidelines, stationery & packaging design. Build a memorable brand with PostersCraft Kolkata." path="/branding" />
           <div className="bg-surface-variant border-b border-border px-4 flex items-center h-10">
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="bg-surface px-4 py-1.5 rounded-t border border-b-0 border-border text-sm font-medium text-foreground">
               branding.tsx

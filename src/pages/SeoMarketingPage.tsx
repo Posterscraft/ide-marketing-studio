@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { TrendingUp, CheckCircle, ArrowRight, Search, BarChart3, Target, Globe, Mail, Megaphone } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const SeoMarketingPage = () => {
   const services = [
@@ -49,6 +50,7 @@ const SeoMarketingPage = () => {
       <div className="flex flex-1">
         <ProjectExplorer />
         <main className="flex-1 overflow-y-auto flex flex-col">
+          <SEO title="SEO & Digital Marketing" description="SEO, Google Ads, Facebook Ads & email marketing services. ₹70L+ ad spend managed with proven ROI by PostersCraft Kolkata." path="/seo-marketing" />
           <div className="bg-surface-variant border-b border-border px-4 flex items-center h-10">
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="bg-surface px-4 py-1.5 rounded-t border border-b-0 border-border text-sm font-medium text-foreground">
               seo-marketing.json
