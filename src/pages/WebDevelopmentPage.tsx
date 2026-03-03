@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Globe, CheckCircle, ArrowRight, Code, ShoppingCart, Rocket, Shield, Gauge, Wrench } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const WebDevelopmentPage = () => {
   const services = [
@@ -58,6 +59,7 @@ const WebDevelopmentPage = () => {
       <div className="flex flex-1">
         <ProjectExplorer />
         <main className="flex-1 overflow-y-auto flex flex-col">
+          <SEO title="Web Development Services" description="Custom website development with React, Next.js, WordPress & e-commerce solutions. SEO-optimized, responsive websites by PostersCraft." path="/web-development" />
           <div className="bg-surface-variant border-b border-border px-4 flex items-center h-10">
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="bg-surface px-4 py-1.5 rounded-t border border-b-0 border-border text-sm font-medium text-foreground">
               web-development.tsx

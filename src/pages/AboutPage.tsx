@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { TrendingUp, Globe, ShoppingCart, Youtube, Coffee, Building2, Palmtree, Award, Users, IndianRupee, Calendar, Target } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const AboutPage = () => {
   const stats = [
@@ -41,6 +42,7 @@ const AboutPage = () => {
         <ProjectExplorer />
         
         <main className="flex-1 overflow-y-auto flex flex-col">
+          <SEO title="About Us" description="Learn about PostersCraft — Kolkata's leading web development, app development & digital marketing studio. Since 2019, serving 100+ clients with ₹70L+ ad spend managed." path="/about" />
           {/* Editor Tab */}
           <div className="bg-surface-variant border-b border-border px-4 flex items-center h-10">
             <motion.div
