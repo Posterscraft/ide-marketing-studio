@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Monitor, Cpu, Film, Palette, Camera, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import SEO from "@/components/SEO";
+import MobileBottomNav from "@/components/MobileBottomNav";
 
 const StudioPage = () => {
   const editingSetups = [
@@ -41,7 +42,7 @@ const StudioPage = () => {
       <div className="flex flex-1">
         <ProjectExplorer />
         
-        <main className="flex-1 overflow-y-auto flex flex-col">
+        <main className="flex-1 overflow-y-auto flex flex-col pb-16 lg:pb-0">
           <SEO title="Our Studio" description="Visit PostersCraft's professional studio in Baguiati, Kolkata. State-of-the-art video editing, motion graphics, and post-production facilities." path="/studio" />
           <div className="bg-surface-variant border-b border-border px-4 flex items-center h-10">
             <motion.div
@@ -166,7 +167,8 @@ const StudioPage = () => {
           </section>
           <Footer />
         </main>
-      </div>
+    </div>
+      <MobileBottomNav />
     </div>
   );
 };

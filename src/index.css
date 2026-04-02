@@ -133,6 +133,10 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
   .elevation-1 {
     box-shadow: var(--elevation-1);
   }

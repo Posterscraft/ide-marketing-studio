@@ -45,14 +45,7 @@ const AppBar = () => {
         <div className="flex items-center gap-1 lg:gap-2 ml-auto">
           <ThemeToggle />
           
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 hover:bg-secondary/50 rounded material-transition"
-            aria-label="Toggle menu"
-          >
-            <Menu className="w-5 h-5" />
-          </button>
+          {/* Mobile Menu Button removed - using bottom nav */}
 
           <Link to="/contact" className="hidden sm:block">
             <Button
@@ -65,28 +58,7 @@ const AppBar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <nav className="lg:hidden bg-surface border-t border-border elevation-2 animate-in slide-in-from-top">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              to={item.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-4 py-3 text-sm text-foreground hover:bg-secondary/50 border-b border-border/50 material-transition"
-            >
-              {item.label}
-            </Link>
-          ))}
-          <div className="p-4">
-            <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-              <Button className="w-full gradient-primary text-primary-foreground">
-                Get a Quote
-              </Button>
-            </Link>
-          </div>
-        </nav>
-      )}
+      {/* Mobile Menu - hidden since we use bottom nav */}
     </header>
   );
 };

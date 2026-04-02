@@ -2,6 +2,7 @@ import AppBar from "@/components/AppBar";
 import ProjectExplorer from "@/components/ProjectExplorer";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import MobileBottomNav from "@/components/MobileBottomNav";
 
 const BlogPage = () => {
   return (
@@ -11,7 +12,7 @@ const BlogPage = () => {
       <div className="flex flex-1">
         <ProjectExplorer />
         
-        <main className="flex-1 overflow-y-auto flex flex-col">
+        <main className="flex-1 overflow-y-auto flex flex-col pb-16 lg:pb-0">
           <SEO title="Blog" description="Read insights on web development, digital marketing, SEO tips, branding strategies, and creative production from PostersCraft." path="/blog" />
           <section className="py-16 lg:py-24">
             <div className="container mx-auto px-4">
@@ -28,7 +29,8 @@ const BlogPage = () => {
           </section>
           <Footer />
         </main>
-      </div>
+    </div>
+      <MobileBottomNav />
     </div>
   );
 };

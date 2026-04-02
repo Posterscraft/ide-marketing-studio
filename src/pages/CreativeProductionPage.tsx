@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Camera, CheckCircle, Palette, Video, Sparkles, Layers, Target, ArrowRight, Star, Zap, Eye, PenTool } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
+import MobileBottomNav from "@/components/MobileBottomNav";
 
 const CreativeProductionPage = () => {
   const services = [
@@ -49,7 +50,7 @@ const CreativeProductionPage = () => {
       <AppBar />
       <div className="flex flex-1">
         <ProjectExplorer />
-        <main className="flex-1 overflow-y-auto flex flex-col">
+        <main className="flex-1 overflow-y-auto flex flex-col pb-16 lg:pb-0">
           <SEO title="Creative Production Services" description="Professional poster design, social media creatives, video production, product photography & motion graphics by PostersCraft Kolkata." path="/creative-production" />
           <div className="bg-surface-variant border-b border-border px-4 flex items-center h-10">
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="bg-surface px-4 py-1.5 rounded-t border border-b-0 border-border text-sm font-medium text-foreground">
@@ -184,7 +185,8 @@ const CreativeProductionPage = () => {
 
           <Footer />
         </main>
-      </div>
+    </div>
+      <MobileBottomNav />
     </div>
   );
 };
