@@ -173,8 +173,8 @@ const BrandingPage = () => {
 
           <Footer />
         </main>
-      <MobileBottomNav />
     </div>
+      <MobileBottomNav />
     </div>
   );
 };

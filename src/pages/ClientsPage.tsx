@@ -18,8 +18,8 @@ const ClientsPage = () => {
           <Clients />
           <Footer />
         </main>
-      <MobileBottomNav />
     </div>
+      <MobileBottomNav />
     </div>
   );
 };

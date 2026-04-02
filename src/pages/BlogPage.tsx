@@ -29,8 +29,8 @@ const BlogPage = () => {
           </section>
           <Footer />
         </main>
-      <MobileBottomNav />
     </div>
+      <MobileBottomNav />
     </div>
   );
 };

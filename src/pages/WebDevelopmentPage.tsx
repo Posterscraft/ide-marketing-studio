@@ -193,8 +193,8 @@ const WebDevelopmentPage = () => {
 
           <Footer />
         </main>
-      <MobileBottomNav />
     </div>
+      <MobileBottomNav />
     </div>
   );
 };

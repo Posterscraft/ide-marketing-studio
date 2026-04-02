@@ -193,8 +193,8 @@ const MobileAppPage = () => {
 
           <Footer />
         </main>
-      <MobileBottomNav />
     </div>
+      <MobileBottomNav />
     </div>
   );
 };

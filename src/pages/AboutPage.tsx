@@ -258,8 +258,8 @@ const AboutPage = () => {
 
           <Footer />
         </main>
-      <MobileBottomNav />
     </div>
+      <MobileBottomNav />
     </div>
   );
 };

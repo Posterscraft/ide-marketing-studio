@@ -176,8 +176,8 @@ const StudioBookingPage = () => {
 
           <Footer />
         </main>
-      <MobileBottomNav />
     </div>
+      <MobileBottomNav />
     </div>
   );
 };

@@ -29,8 +29,8 @@ const PricingPage = () => {
           </section>
           <Footer />
         </main>
-      <MobileBottomNav />
     </div>
+      <MobileBottomNav />
     </div>
   );
 };
