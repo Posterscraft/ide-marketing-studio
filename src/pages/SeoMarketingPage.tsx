@@ -177,7 +177,8 @@ const SeoMarketingPage = () => {
 
           <Footer />
         </main>
-      </div>
+      <MobileBottomNav />
+    </div>
     </div>
   );
 };

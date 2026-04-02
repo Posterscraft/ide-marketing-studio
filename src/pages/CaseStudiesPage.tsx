@@ -29,7 +29,8 @@ const CaseStudiesPage = () => {
           </section>
           <Footer />
         </main>
-      </div>
+      <MobileBottomNav />
+    </div>
     </div>
   );
 };

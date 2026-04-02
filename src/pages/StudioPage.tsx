@@ -167,7 +167,8 @@ const StudioPage = () => {
           </section>
           <Footer />
         </main>
-      </div>
+      <MobileBottomNav />
+    </div>
     </div>
   );
 };

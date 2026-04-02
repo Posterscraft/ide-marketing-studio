@@ -160,7 +160,8 @@ const AdCreativesPage = () => {
 
           <Footer />
         </main>
-      </div>
+      <MobileBottomNav />
+    </div>
     </div>
   );
 };

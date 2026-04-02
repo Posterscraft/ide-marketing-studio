@@ -165,7 +165,8 @@ const VideoEditingPage = () => {
 
           <Footer />
         </main>
-      </div>
+      <MobileBottomNav />
+    </div>
     </div>
   );
 };

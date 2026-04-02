@@ -196,7 +196,8 @@ const EventManagementPage = () => {
 
           <Footer />
         </main>
-      </div>
+      <MobileBottomNav />
+    </div>
     </div>
   );
 };

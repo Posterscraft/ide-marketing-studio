@@ -29,7 +29,8 @@ const ServicesPage = () => {
           <Services />
           <Footer />
         </main>
-      </div>
+      <MobileBottomNav />
+    </div>
     </div>
   );
 };

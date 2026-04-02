@@ -29,7 +29,8 @@ const FAQPage = () => {
           </section>
           <Footer />
         </main>
-      </div>
+      <MobileBottomNav />
+    </div>
     </div>
   );
 };

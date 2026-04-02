@@ -18,7 +18,8 @@ const PortfolioPage = () => {
           <Portfolio />
           <Footer />
         </main>
-      </div>
+      <MobileBottomNav />
+    </div>
     </div>
   );
 };

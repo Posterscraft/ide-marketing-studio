@@ -18,7 +18,8 @@ const ContactPage = () => {
           <Contact />
           <Footer />
         </main>
-      </div>
+      <MobileBottomNav />
+    </div>
     </div>
   );
 };
