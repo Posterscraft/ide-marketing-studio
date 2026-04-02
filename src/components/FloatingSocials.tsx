@@ -2,7 +2,7 @@ import { Facebook, Linkedin, Instagram } from "lucide-react";
 
 const FloatingSocials = () => {
   return (
-    <div className="fixed right-4 bottom-4 md:right-6 md:bottom-6 z-40 flex flex-col gap-2 md:gap-3">
+    <div className="fixed right-4 bottom-20 lg:bottom-4 md:right-6 z-40 flex flex-col gap-2 md:gap-3">
       <a
         href="https://www.instagram.com/posterscraft_official/"
         target="_blank"
