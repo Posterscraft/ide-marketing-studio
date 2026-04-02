@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Share2, CheckCircle, BarChart3, Users, Target, Megaphone, ArrowRight, TrendingUp, Calendar, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
+import MobileBottomNav from "@/components/MobileBottomNav";
 
 const SocialCampaignsPage = () => {
   const services = [
@@ -44,7 +45,7 @@ const SocialCampaignsPage = () => {
       <AppBar />
       <div className="flex flex-1">
         <ProjectExplorer />
-        <main className="flex-1 overflow-y-auto flex flex-col">
+        <main className="flex-1 overflow-y-auto flex flex-col pb-16 lg:pb-0">
           <SEO title="Social Media Campaigns" description="Social media management, content strategy, influencer marketing & paid social advertising. Grow your brand with PostersCraft." path="/social-campaigns" />
           <div className="bg-surface-variant border-b border-border px-4 flex items-center h-10">
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="bg-surface px-4 py-1.5 rounded-t border border-b-0 border-border text-sm font-medium text-foreground">

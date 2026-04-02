@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import SEO from "@/components/SEO";
+import MobileBottomNav from "@/components/MobileBottomNav";
 
 const ServicesPage = () => {
   return (
@@ -13,7 +14,7 @@ const ServicesPage = () => {
       <div className="flex flex-1">
         <ProjectExplorer />
         
-        <main className="flex-1 overflow-y-auto flex flex-col">
+        <main className="flex-1 overflow-y-auto flex flex-col pb-16 lg:pb-0">
           <SEO title="Our Services" description="Explore PostersCraft's services — web development, mobile apps, SEO, branding, video editing, social media, ad creatives, event management & studio booking." path="/services" />
           <div className="bg-surface-variant border-b border-border px-4 flex items-center h-10">
             <motion.div
