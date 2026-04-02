@@ -45,14 +45,7 @@ const AppBar = () => {
         <div className="flex items-center gap-1 lg:gap-2 ml-auto">
           <ThemeToggle />
           
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 hover:bg-secondary/50 rounded material-transition"
-            aria-label="Toggle menu"
-          >
-            <Menu className="w-5 h-5" />
-          </button>
+          {/* Mobile Menu Button removed - using bottom nav */}
 
           <Link to="/contact" className="hidden sm:block">
             <Button
