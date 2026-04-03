@@ -182,10 +182,11 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-code-keyword mb-2">
+                    <label htmlFor="budget" className="block text-code-keyword mb-2">
                       <span className="text-primary">{">"}</span> budget?
                     </label>
                     <input
+                      id="budget"
                       type="text"
                       value={formData.budget}
                       onChange={(e) => handleChange("budget", e.target.value)}
