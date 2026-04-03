@@ -171,8 +171,8 @@ const Clients = () => {
 
           <button
             onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-surface elevation-3 flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground material-transition -mr-2 lg:-mr-5 hidden md:flex"
-            aria-label="Scroll right"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-surface elevation-3 items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground material-transition -mr-2 lg:-mr-5 hidden md:flex"
+            aria-label="Scroll testimonials right"
           >
             <ChevronRight className="w-5 h-5" />
           </button>

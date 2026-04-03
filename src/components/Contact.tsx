@@ -242,10 +242,11 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-code-keyword mb-2">
+                    <label htmlFor="projectDetails" className="block text-code-keyword mb-2">
                       <span className="text-primary">{">"}</span> project_details?
                     </label>
                     <textarea
+                      id="projectDetails"
                       value={formData.message}
                       onChange={(e) => handleChange("message", e.target.value)}
                       onBlur={() => handleBlur("message")}

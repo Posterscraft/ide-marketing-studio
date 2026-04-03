@@ -188,9 +188,10 @@ const Portfolio = () => {
                         href={project.project_url}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`Visit ${project.title} project`}
                         className="inline-flex items-center gap-2 px-4 py-2 mt-2 gradient-primary text-primary-foreground rounded-lg text-sm font-medium hover:opacity-90 material-transition elevation-1"
                       >
-                        Visit Project
+                        Visit {project.title}
                         <ExternalLink className="w-4 h-4" />
                       </a>
                     )}
