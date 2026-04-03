@@ -222,10 +222,11 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-code-keyword mb-2">
+                    <label htmlFor="contactEmail" className="block text-code-keyword mb-2">
                       <span className="text-primary">{">"}</span> contact_email?
                     </label>
                     <input
+                      id="contactEmail"
                       type="email"
                       value={formData.email}
                       onChange={(e) => handleChange("email", e.target.value)}
