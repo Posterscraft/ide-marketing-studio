@@ -202,10 +202,11 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-code-keyword mb-2">
+                    <label htmlFor="timeline" className="block text-code-keyword mb-2">
                       <span className="text-primary">{">"}</span> timeline?
                     </label>
                     <input
+                      id="timeline"
                       type="text"
                       value={formData.timeline}
                       onChange={(e) => handleChange("timeline", e.target.value)}
