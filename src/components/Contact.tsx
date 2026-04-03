@@ -153,10 +153,11 @@ const Contact = () => {
 
                 <form onSubmit={handleSubmit} className="space-y-6 font-mono text-sm">
                   <div>
-                    <label className="block text-code-keyword mb-2">
+                    <label htmlFor="projectType" className="block text-code-keyword mb-2">
                       <span className="text-primary">{">"}</span> project_type?
                     </label>
                     <select
+                      id="projectType"
                       value={formData.projectType}
                       onChange={(e) => handleChange("projectType", e.target.value)}
                       onBlur={() => handleBlur("projectType")}
