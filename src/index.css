@@ -61,7 +61,7 @@ All colors MUST be HSL.
 
     /* Status Bar */
     --status-bar: 210 20% 92%;
-    --status-text: 210 15% 35%;
+    --status-text: 210 15% 30%;
 
     /* Code Editor */
     --editor-bg: 0 0% 100%;
