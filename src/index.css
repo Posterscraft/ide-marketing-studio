@@ -36,7 +36,7 @@ All colors MUST be HSL.
     --secondary-foreground: 210 15% 15%;
 
     --muted: 210 14% 95%;
-    --muted-foreground: 210 10% 50%;
+    --muted-foreground: 210 10% 40%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
@@ -61,12 +61,12 @@ All colors MUST be HSL.
 
     /* Status Bar */
     --status-bar: 210 20% 92%;
-    --status-text: 210 15% 35%;
+    --status-text: 210 15% 30%;
 
     /* Code Editor */
     --editor-bg: 0 0% 100%;
     --editor-gutter: 210 15% 96%;
-    --code-comment: 210 10% 55%;
+    --code-comment: 210 10% 45%;
     --code-keyword: 281 50% 60%;
     --code-string: 142 55% 45%;
   }
@@ -96,7 +96,7 @@ All colors MUST be HSL.
     --secondary-foreground: 210 10% 92%;
 
     --muted: 210 20% 20%;
-    --muted-foreground: 210 10% 65%;
+    --muted-foreground: 210 10% 72%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 100%;

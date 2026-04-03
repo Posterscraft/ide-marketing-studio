@@ -153,10 +153,11 @@ const Contact = () => {
 
                 <form onSubmit={handleSubmit} className="space-y-6 font-mono text-sm">
                   <div>
-                    <label className="block text-code-keyword mb-2">
+                    <label htmlFor="projectType" className="block text-code-keyword mb-2">
                       <span className="text-primary">{">"}</span> project_type?
                     </label>
                     <select
+                      id="projectType"
                       value={formData.projectType}
                       onChange={(e) => handleChange("projectType", e.target.value)}
                       onBlur={() => handleBlur("projectType")}
@@ -181,10 +182,11 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-code-keyword mb-2">
+                    <label htmlFor="budget" className="block text-code-keyword mb-2">
                       <span className="text-primary">{">"}</span> budget?
                     </label>
                     <input
+                      id="budget"
                       type="text"
                       value={formData.budget}
                       onChange={(e) => handleChange("budget", e.target.value)}
@@ -200,10 +202,11 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-code-keyword mb-2">
+                    <label htmlFor="timeline" className="block text-code-keyword mb-2">
                       <span className="text-primary">{">"}</span> timeline?
                     </label>
                     <input
+                      id="timeline"
                       type="text"
                       value={formData.timeline}
                       onChange={(e) => handleChange("timeline", e.target.value)}
@@ -219,10 +222,11 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-code-keyword mb-2">
+                    <label htmlFor="contactEmail" className="block text-code-keyword mb-2">
                       <span className="text-primary">{">"}</span> contact_email?
                     </label>
                     <input
+                      id="contactEmail"
                       type="email"
                       value={formData.email}
                       onChange={(e) => handleChange("email", e.target.value)}
@@ -238,10 +242,11 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-code-keyword mb-2">
+                    <label htmlFor="projectDetails" className="block text-code-keyword mb-2">
                       <span className="text-primary">{">"}</span> project_details?
                     </label>
                     <textarea
+                      id="projectDetails"
                       value={formData.message}
                       onChange={(e) => handleChange("message", e.target.value)}
                       onBlur={() => handleBlur("message")}

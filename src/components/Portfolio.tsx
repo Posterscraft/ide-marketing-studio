@@ -134,11 +134,14 @@ const Portfolio = () => {
                   <div className="h-48 relative overflow-hidden">
                     {project.image_url ? (
                       <>
-                        <img 
-                          src={project.image_url} 
-                          alt={project.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
+                      <img 
+                        src={project.image_url} 
+                        alt={`${project.title} - ${project.client}`}
+                        width={400}
+                        height={192}
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                       </>
                     ) : (
@@ -185,9 +188,10 @@ const Portfolio = () => {
                         href={project.project_url}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`Visit ${project.title} project`}
                         className="inline-flex items-center gap-2 px-4 py-2 mt-2 gradient-primary text-primary-foreground rounded-lg text-sm font-medium hover:opacity-90 material-transition elevation-1"
                       >
-                        Visit Project
+                        Visit {project.title}
                         <ExternalLink className="w-4 h-4" />
                       </a>
                     )}
